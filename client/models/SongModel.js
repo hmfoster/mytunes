@@ -8,7 +8,6 @@ var SongModel = Backbone.Model.extend({
 
   enqueue: function(){
     // Triggering an event here will also trigger the event on the collection
-    console.log('songmodel.js line 11: ', this);
     this.trigger('enqueue', this);
   },
 
