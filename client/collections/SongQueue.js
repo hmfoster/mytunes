@@ -5,13 +5,14 @@ var SongQueue = Songs.extend({
     //set an event listener if something is at position 0
     //trigger playFirst
     this.on('add', function(song){
-      console.log('Added to Song Queue');
+      console.log('on add to queue',this.length);
       debugger;
-      this.playFirst();
-
+      if (this.length===1){
+        this.playFirst();
+      }
     }, this);
   },
-  playFirst: function(song){
+  playFirst: function(){
 
     return this.models[0].play();
     //return first item in queue

@@ -19,7 +19,6 @@ var AppModel = Backbone.Model.extend({
 
     params.library.on('enqueue', function(song){
       this.get('songQueue').add(song);
-      this.get('songQueue').playFirst(song);
       console.log(this.get('songQueue'));
     }, this);
     //listen for addition to song queue
