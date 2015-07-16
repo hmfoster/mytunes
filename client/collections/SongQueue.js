@@ -6,12 +6,12 @@ var SongQueue = Songs.extend({
     //trigger playFirst
   },
   playFirst: function(song){
-    debugger;
-    return this.get(song);
+
+    return this.models[0].play();
     //return first item in queue
     //this.model.play();  
   }
 
 });
 
-//
+//[{artist: aaliya, }]
