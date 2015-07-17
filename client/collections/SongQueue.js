@@ -21,8 +21,16 @@ var SongQueue = Songs.extend({
   });
 
     this.on('dequeue',function(){
+      //call playNext
+      //var song;
       if (this.length >=1 ){
+        //song = this
         this.playFirst();
+      } else {
+        //song = null
+        console.log('out of songs');
+        debugger;
+        this.trigger('stop', this);
       }
     }, this);
     //if the queue is not empty
@@ -33,10 +41,7 @@ var SongQueue = Songs.extend({
   playFirst: function(){
 
     return this.models[0].play();
-    //return first item in queue
-    //this.model.play();  
-  }
+    //return first item in queue 
+  },
 
 });
-
-//[{artist: aaliya, }]
