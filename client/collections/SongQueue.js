@@ -14,34 +14,20 @@ var SongQueue = Songs.extend({
     this.on('ended', function(){
       //call on first item dequeue()
       this.models[0].dequeue();
-      //this.models.shift();
-    //delete first item in queue
-
-      //collection.remove(models, [options]) 
   });
 
     this.on('dequeue',function(){
-      //call playNext
-      //var song;
       if (this.length >=1 ){
-        //song = this
         this.playFirst();
-      } else {
-        //song = null
-        console.log('out of songs');
-        debugger;
-        this.trigger('stop', this);
       }
     }, this);
-    //if the queue is not empty
-      //playFirst();
       
   },
 
   playFirst: function(){
 
     return this.models[0].play();
-    //return first item in queue 
+
   },
 
 });

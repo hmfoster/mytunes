@@ -21,9 +21,4 @@ var SongModel = Backbone.Model.extend({
     this.trigger('ended', this);
   },
 
-  stop: function(){
-    console.log('song model stop');
-    this.trigger('play', null);
-  }
-
 });
